@@ -9,8 +9,20 @@ import java.util.Scanner;
  */
 public class Triangulo {
     public static String evaluar(double a, double b, double c) {
-        // TODO: Coloca aquí el código del ejercicio 7: Triángulos
-        return "";
+        String tipo_de_triangulo = "";
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            // Identificar el tipo de triángulo
+            if (a == b && b == c) {
+                tipo_de_triangulo = "El triángulo es equilátero";
+            } else if (a == b || a == c || b == c) {
+                tipo_de_triangulo = "El triángulo es isósceles";
+            } else {
+                tipo_de_triangulo = "El triángulo es escaleno";
+            }
+        } else {
+            tipo_de_triangulo = "No es un triángulo válido";
+        }
+        return tipo_de_triangulo;
     }
     
     public static void main(String[] args) {
@@ -26,3 +38,4 @@ public class Triangulo {
         System.out.println(respuesta);
     }
 }
+
