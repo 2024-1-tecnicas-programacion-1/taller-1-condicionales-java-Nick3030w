@@ -17,9 +17,25 @@ public class EdadTest {
     @Test
     public void test2000Enero1() {
         String valorEsperado = "Usted tiene 24 años";
-        String valorActual = Edad.evaluar(1, 1, 2024);
+        String valorActual = Edad.evaluar(1, 1, 2000);
         assertEquals(valorEsperado, valorActual);
     }
     
-    // TODO: Agrega tus otros casos de prueba aquí
+    public void test2005julio2() {
+        String valorEsperado = "Usted tiene 18 años";
+        String valorActual = Edad.evaluar(2, 7, 2005);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
+    public void test1969febrero1() {
+        String valorEsperado = "Usted tiene 55 años";
+        String valorActual = Edad.evaluar(1, 2, 1969);
+        assertEquals(valorEsperado, valorActual);
+    }
+    
+    public void test1976agosto19() {
+        String valorEsperado = "Usted tiene 47 años";
+        String valorActual = Edad.evaluar(19, 8, 1976);
+        assertEquals(valorEsperado, valorActual);
+    }
 }
