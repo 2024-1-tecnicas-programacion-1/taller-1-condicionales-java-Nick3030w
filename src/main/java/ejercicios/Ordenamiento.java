@@ -10,8 +10,24 @@ import java.util.Scanner;
  */
 public class Ordenamiento {
     public static String evaluar(int numero1, int numero2, int numero3, int numero4) {
-        // TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-        return "";
+        String respuesta="";
+        int[] numeros = {numero1, numero2, numero3, numero4};
+            for (int i = 0; i < numeros.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < numeros.length; j++) {
+                if (numeros[j] < numeros[min]) {
+                    min = j;
+                }
+            }
+            // Intercambiar los elementos en las posiciones min e i
+            int temp = numeros[min];
+            numeros[min] = numeros[i];
+            numeros[i] = temp;
+        }
+        for (int numero : numeros) {
+            respuesta += numero+" ";
+        }
+        return respuesta;
     }
     
     public static void main(String[] args) {
